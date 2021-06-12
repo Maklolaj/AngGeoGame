@@ -1,0 +1,41 @@
+<div class="que_form">
+    <mat-grid-list cols="2" rowHeight="2:1" class="grid">
+        <mat-grid-tile-header>
+            {{question.questionID}}. {{question.question}}
+        </mat-grid-tile-header>
+
+        <mat-grid-tile>
+            <button (click)="checkAnswer(question.answers[0])"
+             mat-raised-button color="primary">{{question.answers[0]}} </button>
+        </mat-grid-tile>
+
+        <mat-grid-tile> 
+            <button (click)="checkAnswer(question.answers[1])"
+             mat-raised-button color="primary">{{question.answers[1]}} </button>
+        </mat-grid-tile>
+
+        <mat-grid-tile> 
+            <button (click)="checkAnswer(question.answers[2])"
+             mat-raised-button color="primary">{{question.answers[2]}} </button>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <button (click)="checkAnswer(question.answers[3])"
+             mat-raised-button color="primary">{{question.answers[3]}} </button>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <div class="result" *ngIf="isCorrect == 1"> 
+        <mat-icon class="Ok-icon">check</mat-icon>
+        <span class="comment"> That was the right answer!</span>
+      </div>
+
+      <div class="result" *ngIf="isCorrect == 2"> 
+          <mat-icon class="NotOk-icon">clear</mat-icon>
+          <span class="comment"> Sorry, wrong answer!</span>
+      </div>
+
+      
+</div>
+
+  

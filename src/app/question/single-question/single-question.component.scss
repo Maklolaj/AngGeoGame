@@ -1,0 +1,55 @@
+mat-grid-tile {
+    background: lightblue;
+  }
+
+  .que_form {
+    width: 60%;
+    padding-left: 8rem;
+  }
+
+
+  .mat-grid-tile-header {
+      font-size: 2rem;
+      
+  }
+
+  .mat-grid-tile {
+      font-size: large;
+  }
+
+  .grid {
+      margin-bottom: 1rem;
+  }
+
+  button{
+      font-size: 1.5rem;
+  }
+
+  .result{
+      justify-content: right;
+  }
+
+  .Ok-icon {
+      color: green;
+      font-size: 3rem;
+  }
+
+  .NotOk-icon {
+      color: red;
+      font-size: 3rem;
+      
+  }
+
+  .result {
+    //display: flex;
+    //align-items: center;
+    margin-bottom: 2rem;    
+    margin-left: 1rem; 
+
+  }
+
+  .comment {
+      padding-left:  2rem;
+      font-size: 2rem;
+ 
+  }
