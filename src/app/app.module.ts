@@ -12,9 +12,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { QuestionComponent } from './question/question.component';
 import { SingleQuestionComponent } from './question/single-question/single-question.component'
-import { MatGridListModule } from '@angular/material/grid-list'; 
-//import {  } from '@angular/material/grid-list-tit'; 
-//<mat-grid-title-header> Question body</mat-grid-title-header>
+import { MatGridListModule } from '@angular/material/grid-list';
+
 const routes:Routes = [
   {path: 'question', component:QuestionComponent}
 ];

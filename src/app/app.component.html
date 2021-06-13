@@ -2,9 +2,15 @@
   <div>MyNavBar</div>
   <div class="right-content"> 
     <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-    <span> About </span>
-    <button mat-button color ='primary' routerLink='question'> 
+
+    <button  mat-button color ='primary' (click)="backClicked()"> 
+      Go Back </button>
+
+    <button (click)="routerClicked()" mat-button color ='primary' routerLink='question'> 
       Test Yourself </button>
   </div>
 </mat-toolbar>
+
+<div *ngIf="isClicked == false" class="mat-display-4"> Welcome to my geographic test app</div>
 <router-outlet></router-outlet>
+

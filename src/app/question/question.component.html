@@ -1,5 +1,9 @@
 
-<ul>
+<div class="spinner" >
+    <mat-spinner  diameter="200" *ngIf="isLoaded == 0"></mat-spinner>
+</div>
+
+<ul *ngIf="isLoaded == 1">
     <div *ngFor="let question of list_of_questions;">
         <app-single-question [question]="question"></app-single-question>
 
