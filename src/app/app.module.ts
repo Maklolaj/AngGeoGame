@@ -13,9 +13,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { QuestionComponent } from './question/question.component';
 import { SingleQuestionComponent } from './question/single-question/single-question.component'
 import { MatGridListModule } from '@angular/material/grid-list';
+import { SeatsComponent } from './seats/seats.component';
+import { InsertImageComponent } from './insert-image/insert-image.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const routes:Routes = [
-  {path: 'question', component:QuestionComponent}
+  {path: 'question', component:QuestionComponent},
+  {path: 'cinema', component:SeatsComponent},
+  {path: 'images/insert', component:InsertImageComponent}
 ];
   
 
@@ -36,9 +41,11 @@ const material = [
   declarations: [
     AppComponent,
     QuestionComponent,
-    SingleQuestionComponent
+    SingleQuestionComponent,
+    SeatsComponent,
+    InsertImageComponent,
   ],
-  imports: [material],
+  imports: [material, HttpClientModule],
   exports: [material],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,8 +6,16 @@
     <button  mat-button color ='primary' (click)="backClicked()"> 
       Go Back </button>
 
+      <button  mat-button color ='primary' (click)="routerClicked()" routerLink='cinema'> 
+        Choose your seat </button>
+
     <button (click)="routerClicked()" mat-button color ='primary' routerLink='question'> 
       Test Yourself </button>
+
+      
+    <button routerLink='images/insert' (click)="routerClicked()" mat-button color ='primary' > 
+      Insert Image </button>
+
   </div>
 </mat-toolbar>
 

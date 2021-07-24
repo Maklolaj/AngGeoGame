@@ -1,0 +1,5 @@
+<p>Insert-image works!</p>
+<input type="file" (change)="onFileSelected($event)">
+<div class="image" *ngIf="uploaded == true">
+    <img  [src]="myImage" alt="Blank">
+</div>
