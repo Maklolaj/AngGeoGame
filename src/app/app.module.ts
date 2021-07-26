@@ -16,11 +16,16 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { SeatsComponent } from './seats/seats.component';
 import { InsertImageComponent } from './insert-image/insert-image.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ValidationFormComponent } from './validation-form/validation-form.component';
+import { FormsModule } from '@angular/forms';
+import { DirtyCheckGuard } from './dirty-check.guard';
 
 const routes:Routes = [
   {path: 'question', component:QuestionComponent},
   {path: 'cinema', component:SeatsComponent},
-  {path: 'images/insert', component:InsertImageComponent}
+  {path: 'images/insert', component:InsertImageComponent},
+  {path: 'form', component:ValidationFormComponent, canDeactivate:[DirtyCheckGuard] },
+  {path: 'second', component:InsertImageComponent },
 ];
   
 
@@ -44,8 +49,9 @@ const material = [
     SingleQuestionComponent,
     SeatsComponent,
     InsertImageComponent,
+    ValidationFormComponent,
   ],
-  imports: [material, HttpClientModule],
+  imports: [material, HttpClientModule, FormsModule],
   exports: [material],
   providers: [],
   bootstrap: [AppComponent]

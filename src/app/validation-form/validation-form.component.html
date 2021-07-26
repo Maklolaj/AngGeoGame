@@ -1,0 +1,43 @@
+
+<div class="val-form">
+
+    <div class="form-group" name="myForm">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name"
+        required
+        [(ngModel)]="person.name" #field1="ngModel" (click)="isDirty = false">
+      </div>
+      
+      
+      <div class="form-group">
+        <label for="alterEgo">Surname</label>
+        <input type="text"  class="form-control" id="alterEgo" name="alterEgo"
+        required
+        [(ngModel)]="person.surname" #field2="ngModel" (click)="isDirty = false">
+      </div>
+      
+      <div class="form-group">
+        <label for="power">Position</label>
+            <select class="form-control"  id="power" name="power" 
+            required
+            [(ngModel)]="person.job" #field3="ngModel" (click)="isDirty = false">
+                <option *ngFor="let job of jobs.jobs" [value]="job">{{job}}</option>
+            </select>   
+      </div>
+      
+      <div class="form-group">
+
+            <button *ngIf="field1.dirty == false && field2.dirty == false && field3.dirty == false " (click)="saveForm()"> Save </button>
+            <button *ngIf="field1.dirty == true || field2.dirty == true || field3.dirty == true " (click)="field1.reset()   " (click)="field2.reset() " (click)="field3.reset() "  (click)="saveForm()"> Save* </button>
+            <button > Pristine: {{field1.pristine}} </button>
+            <button routerLink='/second'>Second page</button>
+
+          
+      </div>
+
+
+    
+
+</div>
+
+
